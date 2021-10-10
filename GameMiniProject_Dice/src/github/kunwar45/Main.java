@@ -13,12 +13,12 @@ import static github.kunwar45.Games.*;
 public class Main {
 
     public static int[] dice1 = {1, 2, 3, 4, 5, 6};
-    int[] dice2 = {1, 2, 3, 4, 5, 6};
+    public static int[] dice2 = {1, 2, 3, 4, 5, 6};
 
     public static void main(String[] args) {
 
 
-        System.out.println(sumGame(dice1));
+        System.out.println(sumGame(dice1, dice2));
 
 //	    Window myFrame = new Window();
 //
