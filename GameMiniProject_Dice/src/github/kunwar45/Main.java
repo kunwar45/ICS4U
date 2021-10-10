@@ -10,12 +10,19 @@ import java.text.DecimalFormat;
 
 public class Main {
 
-    public static void main(String[] args) {
-	    Window myFrame = new Window();
+    int[] dice1 = {1, 2, 3, 4, 5, 6};
+    int[] dice2 = {1, 2, 3, 4, 5, 6};
 
-        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        myFrame.setSize(600, 500); // set frame size
-        myFrame.setVisible(true); // display frame
+    public static void main(String[] args) {
+
+
+        
+
+//	    Window myFrame = new Window();
+//
+//        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        myFrame.setSize(600, 500); // set frame size
+//        myFrame.setVisible(true); // display frame
 
     }
 }
