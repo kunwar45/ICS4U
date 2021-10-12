@@ -43,7 +43,12 @@ public class LoginWindow extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        String word = textField.getText();
-        System.out.println(word);
+
+        DoubleGameWindow myFrame = new DoubleGameWindow();
+
+        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        myFrame.setSize(600, 500); // set frame size
+        myFrame.setVisible(true); // display frame
+        this.dispose();
     }
 }
