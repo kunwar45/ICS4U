@@ -8,9 +8,11 @@ import java.awt.event.ActionListener;
 public class LoginWindow extends JFrame implements ActionListener {
 
     JButton btn;
-    JLabel label;
+    JLabel lblUsername;
+    JLabel lblMoney;
     JPanel panel;
-    JTextField textField;
+    JTextField txtUserName;
+    JTextField txtMoney;
 
     public LoginWindow(){
         super("Casino");
@@ -19,36 +21,37 @@ public class LoginWindow extends JFrame implements ActionListener {
         panel.setLayout(null);
         add(panel);
 
-        label = new JLabel("Enter Your Username");
-        label.setBounds(10, 20, 80, 25);
-        panel.add(label);
+        lblUsername = new JLabel("Enter Your Username");
+        lblUsername.setBounds(10, 20, 150, 25);
+        panel.add(lblUsername);
 
-        textField = new JTextField(20);
-        textField.setBounds(100, 20, 165, 25);
-        panel.add(textField);
+        txtUserName = new JTextField(20);
+        txtUserName.setBounds(10, 50, 165, 25);
+        panel.add(txtUserName);
+
+        lblMoney = new JLabel("Enter How Much Money You Want to Play With");
+        lblMoney.setBounds(10, 75, 3000, 25);
+        panel.add(lblMoney);
+
+        txtMoney = new JTextField(20);
+        txtMoney.setBounds(10, 100, 165, 25);
+        panel.add(txtMoney);
 
         btn = new JButton("Login");
-        btn.setBounds(10, 80, 80, 25);
+        btn.setBounds(10, 200, 80, 25);
+        btn.setActionCommand("Login");
         btn.addActionListener(this);
         panel.add(btn);
-//        btn.setText("button");
-//        btn.setSize(20, 40);
-//        btn.setLocation(25, 150);
-//        btn.setBackground(Color.GRAY);
-//        btn.setActionCommand("UserManual");
-//        add(btn);
-
 
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        DoubleGameWindow myFrame = new DoubleGameWindow();
-
-        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        myFrame.setSize(600, 500); // set frame size
-        myFrame.setVisible(true); // display frame
-        this.dispose();
+        switch (e.getActionCommand()){
+            case "Login":
+                Player player = new Player(txtUserName.getText(), Double.parseDouble(txtMoney.getText()));
+                System.out.println(player.getInitValue() + " " + player.getUsername());
+        }
     }
 }
