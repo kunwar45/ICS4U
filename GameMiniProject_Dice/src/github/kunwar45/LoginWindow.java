@@ -51,7 +51,6 @@ public class LoginWindow extends JFrame implements ActionListener {
         switch (e.getActionCommand()){
             case "Login":
                 Player player = new Player(txtUserName.getText(), Double.parseDouble(txtMoney.getText()));
-                System.out.println(player.getInitValue() + " " + player.getUsername());
         }
     }
 }
