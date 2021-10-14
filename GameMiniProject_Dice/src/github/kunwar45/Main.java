@@ -13,7 +13,7 @@ public class Main {
 
 //        System.out.println(sumGame(dice1, dice2));
 
-	    HigherLowerWindow myFrame = new HigherLowerWindow();
+	    LoginWindow myFrame = new LoginWindow();
 
         myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         myFrame.setSize(600, 500); // set frame size
