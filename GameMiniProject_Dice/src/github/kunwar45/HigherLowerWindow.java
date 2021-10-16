@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class HigherLowerWindow extends JFrame implements ActionListener {
+class GameWindow extends JFrame implements ActionListener {
 
     JButton btnHigher;
     JButton btnLower;
@@ -18,7 +18,7 @@ public class HigherLowerWindow extends JFrame implements ActionListener {
 
     public static Random randomNumber = new Random();
 
-    public HigherLowerWindow(){
+    public GameWindow(){
         super("Roll Doubles");
 
         panel = new JPanel();
@@ -55,52 +55,4 @@ public class HigherLowerWindow extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
     }
 
-//    public Boolean higherLower(){
-//
-//        ArrayList<Integer> rolls = new ArrayList<>();
-//        String guess;
-//        String truth;
-//        boolean keepPlaying;
-//
-//        do {
-//            rolls.add(randomNumber.nextInt(6));
-//            System.out.println("The dice roll was: " + rolls.get(rolls.size()-1));
-//            System.out.print("What is your guess for the next roll (Higher or Lower) (quit to stop playing)");
-//            guess = "hi";
-//
-//            if (guess.equals("quit")) {
-//                keepPlaying = false;
-//                break;
-//            }
-//            else {
-//                keepPlaying = true;
-//            }
-//
-//            rolls.add(randomNumber.nextInt(6));
-//
-//            if (rolls.get(rolls.size()-1) == rolls.get(rolls.size()-2)){
-//                truth = "lower";
-//            }
-//            else if (rolls.get(rolls.size()-1) > rolls.get(rolls.size()-2)){
-//                truth = "higher";
-//            }
-//            else if (rolls.get(rolls.size()-1) < rolls.get(rolls.size()-2)){
-//                truth = "lower";
-//            }
-//            else {
-//                truth = "nah";
-//            }
-//
-//            if (truth.equals(guess)){
-//                return true;
-//            }
-//            else {
-//                return false;
-//            }
-//
-//
-//        }
-//        while (keepPlaying);
-//
-//    }
 }

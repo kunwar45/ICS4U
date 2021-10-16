@@ -13,11 +13,15 @@ public class Main {
 
 //        System.out.println(sumGame(dice1, dice2));
 
-	    LoginWindow myFrame = new LoginWindow();
+//	    LoginWindow myFrame = new LoginWindow();
+//
+//        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        myFrame.setSize(600, 500); // set frame size
+//        myFrame.setVisible(true); // display frame
 
-        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        myFrame.setSize(600, 500); // set frame size
-        myFrame.setVisible(true); // display frame
+        DeckOfCards newDeck = new DeckOfCards();
+        System.out.println(newDeck.getSize());
+
 
     }
 }
