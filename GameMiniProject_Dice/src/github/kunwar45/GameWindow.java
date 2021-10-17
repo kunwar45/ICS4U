@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.Random;
 
-class GameWindow extends JFrame implements ActionListener {
+public class GameWindow extends JFrame implements ActionListener {
 
     JButton btnHigher;
     JButton btnLower;
@@ -19,13 +19,13 @@ class GameWindow extends JFrame implements ActionListener {
     public static Random randomNumber = new Random();
 
     public GameWindow(){
-        super("Roll Doubles");
+        super("Black Jack");
 
         panel = new JPanel();
         panel.setLayout(null);
         add(panel);
 
-        lblInfo = new JLabel("In this Game you will guess if the next roll will be higher or lower than the previous roll");
+        lblInfo = new JLabel("You will be playing black jack, click 'begin' to start the game");
         lblInfo.setBounds(100, 20, 400, 25);
         panel.add(lblInfo);
 

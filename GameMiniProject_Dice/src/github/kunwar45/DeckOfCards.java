@@ -1,7 +1,6 @@
 package github.kunwar45;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class DeckOfCards {
@@ -10,14 +9,20 @@ public class DeckOfCards {
 
     public DeckOfCards(){
 
+        Card newCard;
+
         this.deck = new ArrayList<>();
         for (Card.Suits suit: Card.Suits.values()){
             for (Card.Ranks rank: Card.Ranks.values()){
-                Card newCard = new Card(suit, rank);
+                newCard = new Card(suit, rank);
+                System.out.println(newCard);
                 deck.add(newCard);
             }
         }
-        System.out.println(deck.get(1).toString());
+
+        for (int i = 0; i < deck.size(); i++){
+            System.out.println(deck.get(i).toString());
+        }
 
     }
 
