@@ -24,6 +24,10 @@ public class Player {
         return initValue;
     }
 
+    public double getCurrentValue(){
+        return currentValue;
+    }
+
     public static ArrayList<Double> getHistoryValues() {
         return historyValues;
     }
