@@ -21,8 +21,8 @@ public class DeckOfCards {
 
         for (Card.Suits suit: Card.Suits.values()){
             for (Card.Ranks rank: Card.Ranks.values()){
-                newCard = new Card(suit, rank);
-                this.deck.add(newCard);
+//                 newCard = new Card(suit, rank);
+                this.deck.add(new Card(suit, rank);
                 System.out.println(newCard);
             }
         }
