@@ -7,6 +7,8 @@ import java.awt.event.ActionListener;
 
 public class LoginWindow extends JFrame implements ActionListener {
 
+    public static Player player;
+
     JButton btn;
     JLabel lblUsername;
     JLabel lblMoney;
@@ -50,7 +52,15 @@ public class LoginWindow extends JFrame implements ActionListener {
 
         switch (e.getActionCommand()){
             case "Login":
-                Player player = new Player(txtUserName.getText(), Double.parseDouble(txtMoney.getText()));
+                player = new Player(txtUserName.getText(), Double.parseDouble(txtMoney.getText()));
+
+                GameWindow myFrame = new GameWindow();
+
+                myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                myFrame.setSize(600, 500); // set frame size
+                myFrame.setVisible(true); // display frame
+
+                this.dispose();
         }
     }
 }

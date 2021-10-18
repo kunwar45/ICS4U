@@ -11,13 +11,13 @@ public class Main {
     public static void main(String[] args) {
 
 
-//        System.out.println(sumGame(dice1, dice2));
-
 	    LoginWindow myFrame = new LoginWindow();
 
         myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         myFrame.setSize(600, 500); // set frame size
         myFrame.setVisible(true); // display frame
+
+
 
     }
 }
